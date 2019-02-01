@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Login" customModule="sudungFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mhq-tF-K6o"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Cc-Ig-3aB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-BL-dTh">
+                                <rect key="frame" x="16" y="20" width="343" height="222.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="uSY-qc-ynj">
+                                <rect key="frame" x="56" y="262.5" width="263" height="244.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xQp-ts-20Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="36.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFH-NJ-2kL">
+                                        <rect key="frame" x="0.0" y="69.5" width="263" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ6-Kq-Yet" customClass="ButtonCustom" customModule="sudungFireBase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="138.5" width="263" height="36.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="conneradius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vuk-Vh-N6O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-t7-zRi" customClass="ButtonCustom" customModule="sudungFireBase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="263" height="36.5"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="conneradius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3VE-t7-zRi" firstAttribute="height" secondItem="xQp-ts-20Q" secondAttribute="height" id="7eR-nj-W0m"/>
+                                    <constraint firstItem="3VE-t7-zRi" firstAttribute="width" secondItem="xQp-ts-20Q" secondAttribute="width" id="TW8-NC-L0y"/>
+                                    <constraint firstItem="ZFH-NJ-2kL" firstAttribute="width" secondItem="xQp-ts-20Q" secondAttribute="width" id="dKQ-i6-Uxt"/>
+                                    <constraint firstItem="cZ6-Kq-Yet" firstAttribute="height" secondItem="xQp-ts-20Q" secondAttribute="height" id="e7v-lh-OGH"/>
+                                    <constraint firstItem="ZFH-NJ-2kL" firstAttribute="height" secondItem="xQp-ts-20Q" secondAttribute="height" id="p4I-5J-WOL"/>
+                                    <constraint firstItem="cZ6-Kq-Yet" firstAttribute="width" secondItem="xQp-ts-20Q" secondAttribute="width" id="v2v-yO-rrG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Cc-Ig-3aB" firstAttribute="top" secondItem="uSY-qc-ynj" secondAttribute="bottom" constant="160" id="Dl6-K3-6eQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Qb-BL-dTh" secondAttribute="trailing" id="KRc-6f-o7Y"/>
+                            <constraint firstItem="uSY-qc-ynj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="NAb-ho-Kjx"/>
+                            <constraint firstItem="9Qb-BL-dTh" firstAttribute="top" secondItem="mhq-tF-K6o" secondAttribute="bottom" id="Obf-Xe-qJ9"/>
+                            <constraint firstItem="9Qb-BL-dTh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/3" id="fdp-xg-PM8"/>
+                            <constraint firstItem="uSY-qc-ynj" firstAttribute="top" secondItem="9Qb-BL-dTh" secondAttribute="bottom" constant="20" id="njp-qB-RRO"/>
+                            <constraint firstItem="9Qb-BL-dTh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="teD-aF-hB0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uSY-qc-ynj" secondAttribute="trailing" constant="40" id="zDw-BJ-rD4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="-51.724137931034484"/>
+        </scene>
+        <!--Firebase App-->
+        <scene sceneID="OFw-P7-Ocg">
+            <objects>
+                <tableViewController storyboardIdentifier="ListMeals" id="6zK-xa-WCr" customClass="PersonsTbl" customModule="sudungFireBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="14o-qs-p9v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PLY-yA-nan">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PLY-yA-nan" id="wDg-zC-lk1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6zK-xa-WCr" id="XeP-JA-7Mg"/>
+                            <outlet property="delegate" destination="6zK-xa-WCr" id="fwJ-7N-lMw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Firebase App" largeTitleDisplayMode="always" id="zwu-Fg-4rF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GfT-De-yd5">
+                            <connections>
+                                <action selector="addMeals:" destination="6zK-xa-WCr" id="pUJ-yC-vz9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbp-OF-UCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826.4000000000001" y="-51.724137931034484"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vx5-gQ-ecV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MAk-fk-37y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V6r-XD-9Mb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6zK-xa-WCr" kind="relationship" relationship="rootViewController" id="M50-hZ-Oam"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qng-Qc-GS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="-52.623688155922046"/>
+        </scene>
+    </scenes>
+</document>
